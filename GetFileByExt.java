@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Scanner;
 
 public class GetFileByExt {
 
@@ -17,8 +18,11 @@ public class GetFileByExt {
 	}	
 
 	public static void main(String[] args) {
-
-		File dir=new File("C:\\Users\\prlan\\Desktop\\Test");
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the path here:");
+		String str=sc.nextLine();
+		File dir=new File(str);
 
 		if(dir.exists() && dir.isDirectory()){
 			File [] arr=dir.listFiles();
